@@ -5,6 +5,5 @@ Some of its features are:
 - task manager
 - time manager
 - shopping list 
-- push-notification if family members are near ceartain locations, like supermarkets
 - open-data-based price comparison of e.g. shopping items
 - one-click location sharing
