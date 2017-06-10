@@ -15,6 +15,7 @@ input[type="submit"]{
 }
 
 input[type="checkbox"], label{
+  position: static;
   margin:1rem!important;
 }
 
