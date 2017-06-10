@@ -24,12 +24,21 @@
 }
 
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
-  color: #FFFFFF;
+  color: #FFFFFF!important;
   font-weight: 500;
+  text-decoration: none!important;
+}
+
+a:hover{
+  text-decoration: none!important;
+}
+
+.navbar-default a {
+  color: white!important;
 }
 
 .navbar .navbar-brand {
-  color: #FFFFFF;
+  color: #FFFFFF!important;
   font-weight: 500;
   font-size: 18pt;
 }
