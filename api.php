@@ -34,7 +34,7 @@ switch ($res){
 
 	// Access Point Users
 	case "users":
-		swtich($action){
+		switch($action){
 
 			// Add User to Database if not exist
 			case "put":
