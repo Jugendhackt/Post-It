@@ -11,6 +11,7 @@ html {
   background-size: cover;
 }
 body {
+  color: #FFFFFF;
   font-family: 'Lato', sans-serif;
   background-color: rgba(0, 0, 0, 0);
 
@@ -109,6 +110,7 @@ h1 {
 /*content*/
 .btn-default {
   border: 0px;
+  color: #FFFFFF!important;
   border-radius: 0px;
   background-color: #B81F17;
   box-shadow: 0px 2px #65120A;
@@ -129,7 +131,7 @@ h1 {
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.42857143;
-    color: #555;
+    color: #FFFFFF!important;
     background-color: rgba(0,0,0,0);
     background-image: none;
     border: 1.5px solid #FFFFFF;
