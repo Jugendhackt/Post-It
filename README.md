@@ -6,4 +6,4 @@ Some of its features are:
 - time manager
 - shopping list 
 - open-data-based price comparison of e.g. shopping items
-- one-click location sharing
+- (one-click location sharing)
