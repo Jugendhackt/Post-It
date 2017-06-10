@@ -1,8 +1,8 @@
 .tile {
-  background-color: #7B241C;
-  color: #FFFFFF;
   padding: 12px;
   margin: 4px;
+  border: 1px solid #FFFFFF;
+  border-radius: 6px;
 }
 .tile h3 {
   margin: 0px;
