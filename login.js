@@ -58,12 +58,14 @@ class TodoEntry {
 	}
 }
 
+const testEntry = new TodoEntry("test", false, null);
+testEntry.save();
+
 let template = null;
 const getTodoTemplate = () => {
 	if(!template){
 		template = $('.todoRow');
 		template.detach();
-		template.hidden = false;
 	}
 	return template;
 }
