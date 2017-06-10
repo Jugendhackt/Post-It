@@ -126,6 +126,7 @@ h1 {
 }
 .content {
   padding: 15px 15px 15px 15px;
+  margin-bottom: 6rem;
 }
 .form-control {
     display: block;
