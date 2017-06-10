@@ -157,9 +157,7 @@ h1 {
 .tile {
   padding: 12px;
   margin: 4px;
-  border-radius: 6px;
   background-color: #A92119;
-  transition-delay: 0.2s;
 }
 .tile:hover {
   box-shadow: 0px 0px rgba(0,0,0,0);
