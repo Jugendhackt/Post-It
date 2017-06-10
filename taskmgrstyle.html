@@ -24,18 +24,22 @@
 <!--content-->
   <div class="content">
     <div class="container-fluid">
-      <table id="todoTable">
-          <thead>
-            <tr>
-              <th class="myTable">ToDo-List</th>
-            </tr>
-          </thead>
-          <tr class="todoRow" hidden=false>
-            <td class="todoCheck"></td>
-            <td class="todoText"></td>
-            <td class="todoEdit"></td>
-          </tr>
-        </table>
+      <table>
+           <tr>
+             <th colspan="2">Sample heading</th>
+           </tr>
+           <tr>
+           <td>
+             <input type="checkbox" class="tablecheckbox">
+             This is a sample text.
+           </td>
+           <td>
+             <input type="button" class="tableeditrow fa fa-times">
+             <input type="button" class="tabledeleterow fa fa-pencil">
+           </td>
+         </tr>
+       </table>
+       <button id="addtask" class="btn btn-default fa fa-plus-square"  aria-hidden="true">Add new task</button>
     </div>
   </div>
 </div>
