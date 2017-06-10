@@ -1,3 +1,6 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
 /*general*/
 
 .fa {
@@ -23,7 +26,8 @@ input[type="checkbox"], label{
 /*navigation*/
 
 .navbar {
-  border:none!important;
+  border-radius: 0px;
+  border: 0px;
   background-color: #F83C3C;
   font-family: 'Noto Sans', sans-serif;
   margin: 0px;
