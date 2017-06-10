@@ -4,6 +4,14 @@
   padding: 0px;
 }
 
+input {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+input[type="submit"]{
+  background: #00ccff;
+}
 
 /*navigation*/
 
