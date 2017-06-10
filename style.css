@@ -19,6 +19,14 @@ a {
 a:hover {
   color: #FFFFFF;
 }
+/*general*/
+.fa {
+  padding: 0px;
+}
+.arrowback  {
+  background-color: rgba(255,255,255,0);
+  padding: 10px 4px 10px 4px;
+}
 input {
   margin: 1rem;
   padding: 1rem;
