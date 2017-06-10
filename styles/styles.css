@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 html{
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	background: rgb(200,200,200);
 	color: rgb(20,20,20);
 }
@@ -12,4 +12,10 @@ header{
 	height:4rem;
 	background: #00ccff;
 	color:white;
+	padding: 1rem;
+}
+header h1{
+	font-size: 2.7rem;
+	margin: 0;
+	padding: 0;
 }
