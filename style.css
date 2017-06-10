@@ -1,6 +1,6 @@
 /*general*/
 html {
-  height: 100%;
+  min-height: 100%;
   background: #FF3529; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#FF3529, #9B1E16); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#FF3529, #9B1E16); /* For Opera 11.1 to 12.0 */
@@ -11,10 +11,23 @@ html {
   background-size: cover;
 }
 body {
-  color: #FFFFFF;
   font-family: 'Lato', sans-serif;
   background-color: rgba(0, 0, 0, 0);
-
+  height: 100%;
+}
+#wrap {
+  min-height: 100%;
+}
+#main {
+  overflow:auto;
+  padding: 0px 0px 50px 0px; /* this needs to be bigger than footer height*/
+}
+footer {
+  position: relative;
+  margin-top: -50px; /* negative value of footer height */
+  height: 50px;
+  clear:both;
+  padding-top:20px;
 }
 a {
   color: #FFFFFF;
@@ -27,7 +40,7 @@ a:hover {
   padding: 0px;
 }
 .arrowback  {
-  background-color: rgba(255,255,255,0)!important;
+  background-color: rgba(255,255,255,0);
   padding: 10px 4px 10px 4px;
 }
 input {
@@ -59,11 +72,6 @@ h1 {
 .fa {
   padding: 0px;
 }
-.arrowback  {
-  background-color: green;
-  padding: 10px 4px 10px 4px;
-}
-
 
 /*navigation*/
 
@@ -90,19 +98,14 @@ h1 {
   font-weight: 500;
   text-decoration: none!important;
 }
-
-
-
 .navbar-default a {
   color: white!important;
 }
-
 .navbar .navbar-brand {
   color: #FFFFFF!important;
   font-weight: 500;
   font-size: 18pt;
 }
-
 .navbar .fa {
   color: #FFFFFF;
   padding-right: 3px;
@@ -110,10 +113,10 @@ h1 {
 /*content*/
 .btn-default {
   border: 0px;
-  color: #FFFFFF!important;
   border-radius: 0px;
-  background-color: #B81F17;
+  background-color: #87110B;
   box-shadow: 0px 2px #65120A;
+  transition-delay: 0.2s;
 }
 .btn-default:hover{
   border: 0px;
@@ -123,6 +126,7 @@ h1 {
 }
 .content {
   padding: 15px 15px 15px 15px;
+  margin-bottom: 6rem;
 }
 .form-control {
     display: block;
@@ -131,34 +135,41 @@ h1 {
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.42857143;
-    color: #FFFFFF!important;
+    color: white;
     background-color: rgba(0,0,0,0);
     background-image: none;
-    border: 1.5px solid #FFFFFF;
+    border: 1.5px solid rgba(255,255,255,0.85);
     border-radius: 0px;
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition-delay: 0.2s;
 }
-
+.form-control:focus {
+  border-color: rgba(255,255,255,1);
+    outline: 0;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
+    box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
+}
+.form-control::placeholder {
+  color: rgba(255,255,255,0.6);
+}
 /*main*/
-.btn btn-default {
+.tile {
   padding: 12px;
   margin: 4px;
-  border: 1px solid #FFFFFF;
-  border-radius: 6px;
-  box-shadow: 0px 2px #65120A;
-}
-.btn btn-default:hover {
+  background-color: #87110B;
+  box-shadow: 0px 1.5px #65120A;
+  background-color: #A92119;
+  }
+.tile:hover {
   box-shadow: 0px 0px rgba(0,0,0,0);
-  background-color: #641E16;
+  background-color: #94130C;
 }
-.btn btn-default h3 {
+.tile h3 {
   margin: 0px;
 }
-.btn btn-default p {
+.tile p {
   margin: 0px;
 }
 /*table*/
@@ -169,7 +180,9 @@ table {
   border-radius: 6px;
   -moz-border-radius: 6px;
 }
-
+.myTable {
+  width: 20%;
+}
 td, th {
   border-left: solid #FFFFFF 1px;
   border-top: solid #FFFFFF 1px;
@@ -203,6 +216,7 @@ footer a {
   color: #FFFFFF;
   text-decoration: none;
   border-bottom: 0px solid #FFFFFF;
+  transition-delay: 0.2s;
 }
 
 footer a:visited {

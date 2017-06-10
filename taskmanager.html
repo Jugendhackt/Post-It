@@ -7,7 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width = device-width, initial-scale = 1">
   <link rel="icon" href="assets/images/favicon.png">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -23,49 +22,15 @@
 <!--content-->
   <div class="content">
     <div class="container-fluid">
-      <table>
+      <table id="todoTable">
           <thead>
             <tr>
-              <th>Platform</th>
-              <th>Link</th>
-              <th>Version</th>
+              <th class="myTable">ToDo-List</th>
             </tr>
           </thead>
-          <tr>
-            <td><i class="fa fa-windows" aria-hidden="true"></i></td>
-            <td class="download"><a href="JumpnRun.exe" download>Download for Windows</a></td>
-            <td>0.1</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-apple" aria-hidden="true"></i></td>
-            <td>Not supported in this version.</td>
-            <td>0.1</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-linux" aria-hidden="true"></i></td>
-            <td>Not supported in this version.</td>
-            <td>0.1</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-gamepad" aria-hidden="true"></i></td>
-            <td>Not supported in this version.</td>
-            <td>0.1</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-android" aria-hidden="true"></i></td>
-            <td>Not supported in this version.</td>
-            <td>0.1</td>
-          </tr>
-          <tr>
-            <td>iOS</td>
-            <td>Not supported in this version.</td>
-            <td>0.1</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-globe" aria-hidden="true"></i></td>
-            <td>Not supported in this version.</td>
-            <td>0.1</td>
-          </tr>
+          <tr class="todoRow" hidden=true>
+            <td class="todoItem"></td>
+          </tr>   
         </table>
     </div>
   </div>
@@ -74,17 +39,12 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <span class="footerbrand brand1">Post</span><span class="footerbrand brand2">It</span>
-      </div>
-      <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <a href="mailer.html">Email<i class="fa fa-envelope-o faicon" aria-hidden="true"></i></a>
         <span class="footerdivider">|</span>
         <a href="legalnotice.html">Legal notice<i class="fa fa-gavel faicon" aria-hidden="true"></i></a>
       </div>
     </div>
   </div>
-</div>
-<div class="form-group">
 </div>
 </form>
 <!--scripts-->
