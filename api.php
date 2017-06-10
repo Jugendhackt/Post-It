@@ -98,20 +98,26 @@ switch ($res){
 
 			// LogIn NOT SignUp!
 			case "put":
-				// Test if session is still alive.
-				if(!test_hash()){
-					echo '{"code": 200, "description": "Session still alive!", "sid": $_COOKIE[sid]}';
+				// If too fews parameters: Return 400 error.
+				if(count($args) < 2){
+					echo '{"code": 400, "description": "Too few parameters."}';
 					leave();
 				}
 
-				// If too fews parameters: Return 400 error.
-				if($args)
-					
-				// If Session is not still alive: Try to LogIn
+				// Create new sid
 				$quesult = $GLOBALS['mysql']->query("SELECT `user`,`password` WHERE `user` = $args[user]");
+
+				//If user not exist: Return 409 Error.
 				if(!$quesult){
 					echo '{"code": 409, "description":"There is no user with this name."}';
 					leave();
+				}
+
+				// Check password
+				if(verify_password($args['password']), $quesult['password']){
+					// Create sid
+					$sid = uniqid();
+					$GLOBALS['mysql']->query("UPDATE `postit_user` SET `sid`")
 				}
 			default:
 				echo "{\"code\": 404, \"description\": \"Not found\" }";
