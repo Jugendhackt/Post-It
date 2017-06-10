@@ -1,6 +1,15 @@
 /*general*/
 html {
+  height: 100%;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: rgba(0, 0, 0, 0);
+  height: 100%;
+}
+#wrap {
   min-height: 100%;
+  padding: 0px 0px 50px 0px; /* this needs to be bigger than footer height*/
   background: #FF3529; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#FF3529, #9B1E16); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#FF3529, #9B1E16); /* For Opera 11.1 to 12.0 */
@@ -9,18 +18,8 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
 }
-body {
-  color: #FFFFFF!important;
-  font-family: 'Lato', sans-serif;
-  background-color: rgba(0, 0, 0, 0);
-  height: 100%;
-}
-#wrap {
-  min-height: 100%;
-}
 #main {
-  overflow:auto;
-  padding: 0px 0px 50px 0px; /* this needs to be bigger than footer height*/
+    overflow:auto;
 }
 footer {
   position: relative;
@@ -117,12 +116,17 @@ h1 {
   background-color: #87110B;
   box-shadow: 0px 2px #65120A;
   transition-delay: 0.2s;
+  color: #FFFFFF;
 }
 .btn-default:hover{
   border: 0px;
   border-radius: 0px;
   background-color: #94130C;
   box-shadow: 0px 2px #65120A;
+  color: #FFFFFF;
+}
+#addtask {
+  margin-top: 10px;
 }
 .content {
   padding: 15px 15px 15px 15px;
@@ -172,37 +176,43 @@ h1 {
 .tile p {
   margin: 0px;
 }
+
+
+
+
+
 /*table*/
 table {
+  border: 0px;
   width: 100%;
-  border-collapse: separate;
-  border: solid #FFFFFF 1px;
-  border-radius: 6px;
-  -moz-border-radius: 6px;
-}
-.myTable {
-  width: 20%;
-}
-td, th {
-  border-left: solid #FFFFFF 1px;
-  border-top: solid #FFFFFF 1px;
-  padding: 4px 6px 4px 6px;
-  text-align: center;
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  font-size: 17px;
-  color: #FFF;
-}
-
-th {
-  border-top: none;
   color: #FFFFFF;
-  font-weight: 500;
 }
+tr {
+  margin: 1px 0px;
+}
+th {
+  text-align: center;
+  font-weight: 100;
+  padding: 4px 0px 4px 0px;
+}
+td {
+  padding: 4px;
+}
+.td-right {
+  text-align: right;
+  padding-right: 10px;
+}
+tr:nth-child(even) {background-color: rgba(0,0,0,0.2);}
+tr:nth-child(odd) {background-color: rgba(0,0,0,0.3);}
 
-td:first-child, th:first-child {
-  border-left: none;
-}
+
+
+
+
+
+
+
+
 /*footer*/
 footer {
   padding: 20px 0px 30px 0px;

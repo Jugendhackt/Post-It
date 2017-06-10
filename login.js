@@ -2,7 +2,8 @@ const ajax = (resource, action, data, callback) => {
 		$.ajax({
 			url: 'api.php',
 			type: 'POST',
-			data: {resource, action, data},
+			data: {resource, action, 'payload': data},
+			dataType: 'json',
 			success: function(result){
 				return callback(result);
 			}
@@ -45,7 +46,7 @@ class TodoEntry {
 
 	save() {
 		if(!this.id) {
-			ajax('todos', 'put', {'text': this.text, 'done': this.done}, (result) => {
+			ajax('todos', 'put', {'text': this.text}, (result) => {
 				this.id = result.id;
 			});
 		} else {
@@ -58,6 +59,24 @@ class TodoEntry {
 	}
 }
 
+const testEntry = new TodoEntry("test", false, null);
+testEntry.save();
+
+let template = null;
+const getTodoTemplate = () => {
+	if(!template){
+		template = $('.todoRow');
+		template.detach();
+	}
+	return template;
+}
+
+const addTodoRow = (entry) => {
+	const t = getTodoTemplate().clone();
+	t.html(t.html().replace("{{$text}}", entry.text));
+	$('#todoTable').append(t);
+}
+
 $('#loginbutton').click(() => {
 	login($('#usernameinput').val(), $('#passwordinput').val());
 });
@@ -66,8 +85,10 @@ $('#signupbutton').click(() => {
 	singup($('#usernameinput').val(), $('#passwordinput').val())
 });
 
-if($('.todo')){
+if($('#todoTable')) {
 	TodoEntry.getList((entries) => {
-		entries.map((e) => e)
+		for(let e of entries){
+			addTodoRow(e);
+		}
 	});
 }
