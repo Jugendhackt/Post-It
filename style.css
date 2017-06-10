@@ -1,7 +1,19 @@
+/*general*/
+html {
+  height: 100%;
+  background: #FF3529; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#FF3529, #9B1E16); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#FF3529, #9B1E16); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#FF3529, #9B1E16); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#FF3529, #9B1E16); /* Standard syntax */
+  color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 body {
   font-family: 'Lato', sans-serif;
-  background-color: #7B241C;
-  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0);
+
 }
 a {
   color: #FFFFFF;
@@ -14,7 +26,7 @@ a:hover {
   padding: 0px;
 }
 .arrowback  {
-  background-color: rgba(255,255,255,0);
+  background-color: rgba(255,255,255,0)!important;
   padding: 10px 4px 10px 4px;
 }
 input {
@@ -24,7 +36,6 @@ input {
 }
 
 input[type="button"]{
-  background: rgba(0, 0, 0, 0);!important;
   color:#FFFFFF!important;
 }
 
@@ -32,16 +43,36 @@ input[type="checkbox"], label{
   position: static!important;
   margin:1rem!important;
 }
+span {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1.8;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  color: #FFFFFF;
+}
+
+.fa {
+  padding: 0px;
+}
+.arrowback  {
+  background-color: green;
+  padding: 10px 4px 10px 4px;
+}
+
 
 /*navigation*/
 
 .navbar {
   border-radius: 0px;
   border: 0px;
-  background-color: #641E16;
+  background-color: #A2140D;
   font-family: 'Lato', sans-serif;
   margin: 0px;
-  box-shadow: 0px 2px #4E120D;
+    box-shadow: 0px 1.5px #7B0903;
 }
 
 .navbar li{
@@ -59,9 +90,7 @@ input[type="checkbox"], label{
   text-decoration: none!important;
 }
 
-a:hover{
-  text-decoration: none!important;
-}
+
 
 .navbar-default a {
   color: white!important;
@@ -79,46 +108,85 @@ a:hover{
 }
 /*content*/
 .btn-default {
-  border: 1px solid #FFFFFF;
+  border: 0px;
+  border-radius: 0px;
+  background-color: #B81F17;
   box-shadow: 0px 2px #65120A;
 }
 .btn-default:hover{
-  box-shadow: 0px 0px rgba(0,0,0,0);
-  background-color: #641E16;
-  border: 1px solid #FFFFFF;
+  border: 0px;
+  border-radius: 0px;
+  background-color: #94130C;
+  box-shadow: 0px 2px #65120A;
 }
 .content {
   padding: 15px 15px 15px 15px;
 }
-
-.content span {
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  color: #FFFFFF;
-  line-height: 1.8;
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: rgba(0,0,0,0);
+    background-image: none;
+    border: 1.5px solid #FFFFFF;
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
-.content h1 {
-  font-family: 'Lato', sans-serif;
-  color: #FFFFFF;
-}
 /*main*/
-.tile {
+.btn btn-default {
   padding: 12px;
   margin: 4px;
   border: 1px solid #FFFFFF;
   border-radius: 6px;
   box-shadow: 0px 2px #65120A;
 }
-.tile:hover {
+.btn btn-default:hover {
   box-shadow: 0px 0px rgba(0,0,0,0);
   background-color: #641E16;
 }
-.tile h3 {
+.btn btn-default h3 {
   margin: 0px;
 }
-.tile p {
+.btn btn-default p {
   margin: 0px;
+}
+/*table*/
+table {
+  width: 100%;
+  border-collapse: separate;
+  border: solid #FFFFFF 1px;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+}
+
+td, th {
+  border-left: solid #FFFFFF 1px;
+  border-top: solid #FFFFFF 1px;
+  padding: 4px 6px 4px 6px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: #212F3D;
+}
+
+th {
+  border-top: none;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+td:first-child, th:first-child {
+  border-left: none;
 }
 /*footer*/
 footer {
@@ -164,23 +232,6 @@ footer a:hover {
   font-size: 20pt;
   padding-left: 4px;
 }
-
-
-/*for pixelarts*/
-
-.pixel {
-  border: 0px;
-  image-rendering: optimizeSpeed;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -o-crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: optimize-contrast;
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
-  -ms-interpolation-mode: nearest-neighbor;
-}
-
-
 /*responsive line breaks*/
 
 .rl {
