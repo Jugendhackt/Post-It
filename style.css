@@ -25,15 +25,15 @@ input[type="checkbox"], label{
   border-radius: 0px;
   background-color: #F83C3C;
   font-family: 'Noto Sans', sans-serif;
-  margin-bottom: 0px;
+  margin: 0px;
 }
- 
+
 .navbar li{
   list-style: none;
 }
 
 .navbar-default .navbar-nav a {
-  color: #FFFFFF!important; 
+  color: #FFFFFF!important;
   font-weight: 500;
 }
 

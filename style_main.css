@@ -1,5 +1,12 @@
 .tile {
-  background-color: #16B800;
+  background-color: #7B241C;
   color: #FFFFFF;
-  /*padding: 4px;*/
+  padding: 12px;
+  margin: 4px;
+}
+.tile h3 {
+  margin: 0px;
+}
+.tile p {
+  margin: 0px;
 }
