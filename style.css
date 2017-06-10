@@ -10,7 +10,7 @@ input {
   max-width: 90%;
 }
 
-input[type="submit"]{
+input[type="button"]{
   background: #196F3D!important;
   color:white!important;
 }
