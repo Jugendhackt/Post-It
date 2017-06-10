@@ -116,6 +116,7 @@ h1 {
   border-radius: 0px;
   background-color: #87110B;
   box-shadow: 0px 2px #65120A;
+  transition-delay: 0.2s;
 }
 .btn-default:hover{
   border: 0px;
@@ -160,6 +161,7 @@ h1 {
   margin: 4px;
   border-radius: 6px;
   background-color: #A92119;
+  transition-delay: 0.2s;
 }
 .tile:hover {
   box-shadow: 0px 0px rgba(0,0,0,0);
@@ -215,6 +217,7 @@ footer a {
   color: #FFFFFF;
   text-decoration: none;
   border-bottom: 0px solid #FFFFFF;
+  transition-delay: 0.2s;
 }
 
 footer a:visited {
