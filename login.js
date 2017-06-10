@@ -2,7 +2,8 @@ const ajax = (resource, action, data, callback) => {
 		$.ajax({
 			url: 'api.php',
 			type: 'POST',
-			data: {resource, action, data},
+			data: {resource, action, 'payload': data},
+			dataType: 'json',
 			success: function(result){
 				return callback(result);
 			}
@@ -58,19 +59,21 @@ class TodoEntry {
 	}
 }
 
+const testEntry = new TodoEntry("test", false, null);
+testEntry.save();
+
 let template = null;
 const getTodoTemplate = () => {
 	if(!template){
 		template = $('.todoRow');
 		template.detach();
-		template.hidden = false;
 	}
 	return template;
 }
 
 const addTodoRow = (entry) => {
-	const t = getTodoTemplate();
-	t.html(t.html().replace("{{$active}}", entry.text));
+	const t = getTodoTemplate().clone();
+	t.html(t.html().replace("{{$text}}", entry.text));
 	$('#todoTable').append(t);
 }
 
@@ -83,10 +86,9 @@ $('#signupbutton').click(() => {
 });
 
 if($('#todoTable')) {
-	addTodoRow({'text': 'Text'});
 	TodoEntry.getList((entries) => {
-		entries.each((e) => {
+		for(let e of entries){
 			addTodoRow(e);
-		});
+		}
 	});
 }
