@@ -22,7 +22,7 @@
 <!--content-->
   <div class="content">
     <div class="container-fluid">
-      <table>
+      <table id="todoTable">
           <thead>
             <tr>
               <th class="myTable">Platform</th>
@@ -30,8 +30,10 @@
               <th class="myTable">Version</th>
             </tr>
           </thead>
-          <tr class="todo" hidden=true>
-            <td></td>
+          <tr class="todoRow" hidden=true>
+            <td class="todoCheck"></td>
+            <td class="todoText"></td>
+            <td class="todoEdit"></td>
           </tr>   
         </table>
     </div>
