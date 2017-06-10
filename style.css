@@ -1,16 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 /*general*/
 html {
   height: 100%;
-  background: #FF3529; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#FF3529, #9B1E16); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#FF3529, #9B1E16); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#FF3529, #9B1E16); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#FF3529, #9B1E16); /* Standard syntax */
-  color: #FFFFFF;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 body {
+<<<<<<< HEAD
   font-family: 'Lato', sans-serif;
   background-color: rgba(0, 0, 0, 0);
   height: 100%;
@@ -28,6 +22,17 @@ footer {
   height: 50px;
   clear:both;
   padding-top:20px;
+=======
+  font-family: 'Ubuntu', sans-serif;
+    background: #FF3529; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#FF3529, #9B1E16); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FF3529, #9B1E16); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FF3529, #9B1E16); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FF3529, #9B1E16); /* Standard syntax */
+    color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-size: cover;
+>>>>>>> 6b375903851bd0320e2dc3069c210417c624bed3
 }
 a {
   color: #FFFFFF;
@@ -40,7 +45,7 @@ a:hover {
   padding: 0px;
 }
 .arrowback  {
-  background-color: rgba(255,255,255,0)!important;
+  background-color: rgba(255,255,255,0);
   padding: 10px 4px 10px 4px;
 }
 input {
@@ -50,6 +55,7 @@ input {
 }
 
 input[type="button"]{
+  background: rgba(0, 0, 0, 0);!important;
   color:#FFFFFF!important;
 }
 
@@ -58,25 +64,20 @@ input[type="checkbox"], label{
   margin:1rem!important;
 }
 span {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
   color: #FFFFFF;
   line-height: 1.8;
 }
 
 h1 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   color: #FFFFFF;
 }
 
 .fa {
   padding: 0px;
 }
-.arrowback  {
-  background-color: green;
-  padding: 10px 4px 10px 4px;
-}
-
 
 /*navigation*/
 
@@ -84,7 +85,7 @@ h1 {
   border-radius: 0px;
   border: 0px;
   background-color: #A2140D;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   margin: 0px;
     box-shadow: 0px 1.5px #7B0903;
 }
@@ -119,7 +120,7 @@ h1 {
 .btn-default {
   border: 0px;
   border-radius: 0px;
-  background-color: #B81F17;
+  background-color: #87110B;
   box-shadow: 0px 2px #65120A;
 }
 .btn-default:hover{
@@ -131,6 +132,7 @@ h1 {
 .content {
   padding: 15px 15px 15px 15px;
 }
+<<<<<<< HEAD
 .form-control {
     display: block;
     width: 100%;
@@ -159,22 +161,25 @@ h1 {
 .form-control::placeholder {
   color: rgba(255,255,255,0.6);
 }
+=======
+
+
+>>>>>>> 6b375903851bd0320e2dc3069c210417c624bed3
 /*main*/
-.btn btn-default {
+.tile {
   padding: 12px;
   margin: 4px;
-  border: 1px solid #FFFFFF;
   border-radius: 6px;
-  box-shadow: 0px 2px #65120A;
+  background-color: #A92119;
 }
-.btn btn-default:hover {
+.tile:hover {
   box-shadow: 0px 0px rgba(0,0,0,0);
   background-color: #641E16;
 }
-.btn btn-default h3 {
+.tile h3 {
   margin: 0px;
 }
-.btn btn-default p {
+.tile p {
   margin: 0px;
 }
 /*table*/
@@ -191,7 +196,7 @@ td, th {
   border-top: solid #FFFFFF 1px;
   padding: 4px 6px 4px 6px;
   text-align: center;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
   font-size: 17px;
   color: #212F3D;
@@ -234,7 +239,7 @@ footer a:hover {
 }
 
 .footerbrand {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 100;
   font-size: 32pt;
   margin-bottom: 25px;
@@ -263,7 +268,7 @@ footer a:hover {
     display: inline;
   }
   .footerbrand {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 100;
     font-size: 28pt;
     margin-bottom: 25px;
