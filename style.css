@@ -15,7 +15,6 @@ body {
   background: -o-linear-gradient(#FF3529, #9B1E16); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#FF3529, #9B1E16); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#FF3529, #9B1E16); /* Standard syntax */
-  color: #FFFFFF;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -135,7 +134,7 @@ h1 {
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.42857143;
-    color: #555;
+    color: white;
     background-color: rgba(0,0,0,0);
     background-image: none;
     border: 1.5px solid rgba(255,255,255,0.85);
@@ -191,7 +190,7 @@ td, th {
   font-family: 'Lato', sans-serif;
   font-weight: 500;
   font-size: 17px;
-  color: #212F3D;
+  color: #FFF;
 }
 
 th {
