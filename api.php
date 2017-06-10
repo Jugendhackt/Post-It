@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
 <?php
 
 // #######################
@@ -46,6 +52,7 @@ if(empty($result['resource'])){
 // Put the single variables onto unique variables
 $res = $result['resource'];
 $action = $result['action'];
+$args = Array();
 if(!empty($result['payload'])){
 	$args = $result['payload'];
 }
@@ -211,3 +218,5 @@ switch ($res){
 }
 
 ?>
+</body>
+</html>
