@@ -3,7 +3,9 @@ body {
   background-color: #7B241C;
 }
 /*general*/
-
+.rememberme {
+  color: #FFFFFF;
+}
 .fa {
   padding: 0px;
 }
@@ -15,7 +17,7 @@ input {
 }
 
 input[type="button"]{
-  background: #196F3D!important;
+  background: rgba(0, 0, 0, 0);!important;
   color:white!important;
 }
 
