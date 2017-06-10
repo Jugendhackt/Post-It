@@ -72,8 +72,8 @@ const getTodoTemplate = () => {
 }
 
 const addTodoRow = (entry) => {
-	const t = getTodoTemplate();
-	t.html(t.html().replace("{{$active}}", entry.text));
+	const t = getTodoTemplate().clone();
+	t.html(t.html().replace("{{$text}}", entry.text));
 	$('#todoTable').append(t);
 }
 
@@ -86,7 +86,6 @@ $('#signupbutton').click(() => {
 });
 
 if($('#todoTable')) {
-	addTodoRow({'text': 'Text'});
 	TodoEntry.getList((entries) => {
 		for(let e of entries){
 			addTodoRow(e);
