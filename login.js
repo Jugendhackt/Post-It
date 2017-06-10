@@ -4,9 +4,12 @@ $('#loginbutton').click(function(event){
 	console.log('clicked button');
 	if($('#usernameinput').val() != '' && $('#passwordinput').val() != ''){
 		 console.log('not null')
-		 $.getJSON('pwReader.php', function(json){
+		 $.getJSON('users.json', function(json){
 		 	if(!json) return;
-		 	console.log(json);
+		 	if(json[$('#usernameinput').val()].password == $('#passwordinput').val()){
+		 		user = $('#usernameinput').val();
+		 		loggedIn = true;
+		 	}
 		 });
 	}
 })
