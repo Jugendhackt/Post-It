@@ -179,7 +179,9 @@ table {
   border-radius: 6px;
   -moz-border-radius: 6px;
 }
-
+.myTable {
+  width: 20%;
+}
 td, th {
   border-left: solid #FFFFFF 1px;
   border-top: solid #FFFFFF 1px;
