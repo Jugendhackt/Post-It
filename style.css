@@ -1,6 +1,6 @@
 /*general*/
 html {
-  height: 100%;
+  min-height: 100%;
   background: #FF3529; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#FF3529, #9B1E16); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#FF3529, #9B1E16); /* For Opera 11.1 to 12.0 */
@@ -126,6 +126,7 @@ h1 {
 }
 .content {
   padding: 15px 15px 15px 15px;
+  margin-bottom: 6rem;
 }
 .form-control {
     display: block;
