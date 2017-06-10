@@ -1,20 +1,17 @@
 /*general*/
 html {
-  min-height: 100%;
-  background: #FF3529; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#FF3529, #9B1E16); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#FF3529, #9B1E16); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#FF3529, #9B1E16); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#FF3529, #9B1E16); /* Standard syntax */
-  color: #FFFFFF;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 100%;
 }
 body {
-  color: #FFFFFF;
   font-family: 'Lato', sans-serif;
-  background-color: rgba(0, 0, 0, 0);
-
+    background: #FF3529; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#FF3529, #9B1E16); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FF3529, #9B1E16); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FF3529, #9B1E16); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FF3529, #9B1E16); /* Standard syntax */
+    color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 a {
   color: #FFFFFF;
@@ -27,7 +24,7 @@ a:hover {
   padding: 0px;
 }
 .arrowback  {
-  background-color: rgba(255,255,255,0)!important;
+  background-color: rgba(255,255,255,0);
   padding: 10px 4px 10px 4px;
 }
 input {
@@ -37,6 +34,7 @@ input {
 }
 
 input[type="button"]{
+  background: rgba(0, 0, 0, 0);!important;
   color:#FFFFFF!important;
 }
 
@@ -110,9 +108,8 @@ h1 {
 /*content*/
 .btn-default {
   border: 0px;
-  color: #FFFFFF!important;
   border-radius: 0px;
-  background-color: #B81F17;
+  background-color: #87110B;
   box-shadow: 0px 2px #65120A;
 }
 .btn-default:hover{
@@ -124,40 +121,23 @@ h1 {
 .content {
   padding: 15px 15px 15px 15px;
 }
-.form-control {
-    display: block;
-    width: 100%;
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #FFFFFF!important;
-    background-color: rgba(0,0,0,0);
-    background-image: none;
-    border: 1.5px solid #FFFFFF;
-    border-radius: 0px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-}
+
 
 /*main*/
-.btn btn-default {
+.tile {
   padding: 12px;
   margin: 4px;
   border-radius: 6px;
   background-color: #A92119;
 }
-.btn btn-default:hover {
+.tile:hover {
   box-shadow: 0px 0px rgba(0,0,0,0);
   background-color: #641E16;
 }
-.btn btn-default h3 {
+.tile h3 {
   margin: 0px;
 }
-.btn btn-default p {
+.tile p {
   margin: 0px;
 }
 /*table*/
