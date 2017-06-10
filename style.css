@@ -3,11 +3,20 @@ body {
   background-color: #7B241C;
   color: #FFFFFF;
 }
+a {
+  color: #FFFFFF;
+}
+a:hover {
+  color: #FFFFFF;
+}
 /*general*/
 .fa {
   padding: 0px;
 }
-
+.arrowback  {
+  background-color: rgba(255,255,255,0);
+  padding: 10px 4px 10px 4px;
+}
 input {
   margin: 1rem;
   padding: 1rem;
@@ -23,11 +32,7 @@ input[type="checkbox"], label{
   position: static!important;
   margin:1rem!important;
 }
-@media (min-width: 768px){
-.col-sm-offset-2 {
-    margin: 0!important;
-}
-}
+
 /*navigation*/
 
 .navbar {
@@ -72,35 +77,18 @@ a:hover{
   color: #FFFFFF;
   padding-right: 3px;
 }
-
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #FFFFFF;
-}
-
-.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
-  color: #FFFFFF;
-}
-
-.dropdown-header {
-  font-size: 13px;
-}
-
-.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
-  background-color: #FFFFFF;
-  color: #FFFFFF;
-}
-
-
 /*content*/
 .btn-default {
   border: 1px solid #FFFFFF;
+  box-shadow: 0px 2px #65120A;
 }
 .btn-default:hover{
+  box-shadow: 0px 0px rgba(0,0,0,0);
   background-color: #641E16;
   border: 1px solid #FFFFFF;
 }
 .content {
-  padding: 15px 60px 15px 15px;
+  padding: 15px 15px 15px 15px;
 }
 
 .content span {
@@ -114,7 +102,24 @@ a:hover{
   font-family: 'Lato', sans-serif;
   color: #FFFFFF;
 }
-
+/*main*/
+.tile {
+  padding: 12px;
+  margin: 4px;
+  border: 1px solid #FFFFFF;
+  border-radius: 6px;
+  box-shadow: 0px 2px #65120A;
+}
+.tile:hover {
+  box-shadow: 0px 0px rgba(0,0,0,0);
+  background-color: #641E16;
+}
+.tile h3 {
+  margin: 0px;
+}
+.tile p {
+  margin: 0px;
+}
 /*footer*/
 footer {
   padding: 20px 0px 30px 0px;
@@ -148,15 +153,6 @@ footer a:hover {
   font-size: 32pt;
   margin-bottom: 25px;
 }
-
-.brand1 {
-  color: #FFFFFF;
-}
-
-.brand2 {
-  color: #FFFFFF;
-}
-
 .footerdivider {
   color: #FFFFFF;
   padding-left: 8px;
@@ -190,8 +186,10 @@ footer a:hover {
 .rl {
   display: block;
 }
-
 @media screen and (min-width: 768px) {
+  .col-sm-offset-2 {
+      margin: 0!important;
+  }
   .rl {
     display: inline;
   }
