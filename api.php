@@ -23,7 +23,7 @@ function leave(){
 
 // Test if session is valid.
 function test_hash(){
-	$quesult = $GLOBALS['mysql']->query("SELECT * FROM `postit_user` WHERE `sessionid` = $_COOKIE[sid]");
+	//$quesult = $GLOBALS['mysql']->query("SELECT * FROM `postit_user` WHERE `sessionid` = $_COOKIE[sid]");
 	if(True){
 		return True;
 	}
@@ -106,7 +106,7 @@ switch ($res){
 
 				// If too fews parameters: Return 400 error.
 				if($args)
-
+					
 				// If Session is not still alive: Try to LogIn
 				$quesult = $GLOBALS['mysql']->query("SELECT `user`,`password` WHERE `user` = $args[user]");
 				if(!$quesult){
@@ -131,8 +131,10 @@ switch ($res){
 					leave();
 				}
 				if(count($args) >= 1){
-					$quesult = $GLOBALS['mysql']->query("INSERT INTO `postit_todo`(`text`) VALUES ($args[text])");
-					echo '{"code": 200, "description": "Action was successful.", "id":'. $quesult[id]. '}';
+					$GLOBALS['mysql']->query("INSERT INTO `postit_todo`(`text`) VALUES ('$args[text]')");
+					$id = $GLOBALS['mysql']->insert_id;
+					echo '{"code": 200, "description": "Action was successful.", "id":'. $id . '}';
+					leave();
 				} else {
 					echo '{"code": 400, "description": "Too few parameters."}';
 					leave();
@@ -167,7 +169,7 @@ switch ($res){
 				}
 				if(count($args) >= 1){	
 					//Check if entry still exist.
-					$quesult = $GLOBALS['mysql']->query("SELECT `id` FROM `postit_todo` WHERE `id` = $args[id]");
+					$quesult = $GLOBALS['mysql']->query("SELECT `id` FROM `postit_todo` WHERE `id` = \"$args[id]\"");
 					if($quesult->field_count > 0){
 						// If exist: return 409 error.
 						echo '{"code": 409, "description":"There isn\'t any entry with this id."}';
