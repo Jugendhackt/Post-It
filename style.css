@@ -146,9 +146,8 @@ h1 {
 .btn btn-default {
   padding: 12px;
   margin: 4px;
-  border: 1px solid #FFFFFF;
   border-radius: 6px;
-  box-shadow: 0px 2px #65120A;
+  background-color: #A92119;
 }
 .btn btn-default:hover {
   box-shadow: 0px 0px rgba(0,0,0,0);
