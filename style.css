@@ -7,6 +7,7 @@
 input {
   margin: 1rem;
   padding: 1rem;
+  max-width: 90%;
 }
 
 input[type="submit"]{
@@ -27,7 +28,7 @@ input[type="submit"]{
 }
 
 .navbar-default .navbar-nav a {
-  color: #FFFFFF!important;
+  color: #FFFFFF!important; 
   font-weight: 500;
 }
 
