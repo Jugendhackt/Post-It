@@ -1,5 +1,5 @@
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 /*general*/
 
@@ -29,7 +29,7 @@ input[type="checkbox"], label{
   border-radius: 0px;
   border: 0px;
   background-color: #F83C3C;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   margin: 0px;
 }
 
