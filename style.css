@@ -24,6 +24,7 @@ input[type="checkbox"], label{
 
 .navbar {
   border-radius: 0px;
+  border: 0px;
   background-color: #F83C3C;
   font-family: 'Noto Sans', sans-serif;
   margin: 0px;
