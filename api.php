@@ -131,8 +131,8 @@ switch ($res){
 					leave();
 				}
 				if(count($args) >= 1){
-					$quesult = $GLOBALS['mysql']->query("INSERT INTO `postit_todo`(`text`) VALUES ($args[0])");
-					echo '{"code": 200, "description": "Action was successful.", "id": $quesult[id]}';
+					$quesult = $GLOBALS['mysql']->query("INSERT INTO `postit_todo`(`text`) VALUES ($args[text])");
+					echo '{"code": 200, "description": "Action was successful.", "id":'. $quesult[id]. '}';
 				} else {
 					echo '{"code": 400, "description": "Too few parameters."}';
 					leave();
