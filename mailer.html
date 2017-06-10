@@ -28,19 +28,19 @@
   <form method="post" action="sendmail.php">
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-    <input type="email" name="mail" placeholder="Mail address" class="form-control">
+    <input type="email" name="mail" placeholder="Mail address" class="form-control" required="required">
     </div>
     </div>
 
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-    <input type="name" name="name" placeholder="Name" class="form-control">
+    <input type="name" name="name" placeholder="Name" class="form-control" required="required">
     </div>
     </div>
 
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-    <textarea style="margin: 10px;min-height: 15rem;" name="text" class="form-control" onclick="this.value=''">Your message here.</textarea>
+    <textarea style="margin: 10px;min-height: 15rem;" name="text" class="form-control" onclick="this.value=''" required="required">Your message here.</textarea>
     </div>
     </div>
 
