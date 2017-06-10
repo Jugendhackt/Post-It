@@ -45,7 +45,7 @@ class TodoEntry {
 
 	save() {
 		if(!this.id) {
-			ajax('todos', 'put', {'text': this.text, 'done': this.done}, (result) => {
+			ajax('todos', 'put', {'text': this.text}, (result) => {
 				this.id = result.id;
 			});
 		} else {
@@ -58,6 +58,22 @@ class TodoEntry {
 	}
 }
 
+let template = null;
+const getTodoTemplate = () => {
+	if(!template){
+		template = $('.todoRow');
+		template.detach();
+		template.hidden = false;
+	}
+	return template;
+}
+
+const addTodoRow = (entry) => {
+	const t = getTodoTemplate();
+	t.html(t.html().replace("{{$active}}", entry.text));
+	$('#todoTable').append(t);
+}
+
 $('#loginbutton').click(() => {
 	login($('#usernameinput').val(), $('#passwordinput').val());
 });
@@ -66,8 +82,11 @@ $('#signupbutton').click(() => {
 	singup($('#usernameinput').val(), $('#passwordinput').val())
 });
 
-if($('.todo')){
+if($('#todoTable')) {
+	addTodoRow({'text': 'Text'});
 	TodoEntry.getList((entries) => {
-		entries.map((e) => e)
+		entries.each((e) => {
+			addTodoRow(e);
+		});
 	});
 }
