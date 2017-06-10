@@ -2,7 +2,8 @@ const ajax = (resource, action, data, callback) => {
 		$.ajax({
 			url: 'api.php',
 			type: 'POST',
-			data: {resource, action, data},
+			data: {resource, action, 'payload': data},
+			dataType: 'json',
 			success: function(result){
 				return callback(result);
 			}
@@ -87,8 +88,8 @@ $('#signupbutton').click(() => {
 if($('#todoTable')) {
 	addTodoRow({'text': 'Text'});
 	TodoEntry.getList((entries) => {
-		entries.each((e) => {
+		for(let e of entries){
 			addTodoRow(e);
-		});
+		}
 	});
 }
