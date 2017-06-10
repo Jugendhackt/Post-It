@@ -10,7 +10,7 @@ input {
 }
 
 input[type="submit"]{
-  background: #00ccff;
+  background: #00ccff!important;
 }
 
 /*navigation*/
