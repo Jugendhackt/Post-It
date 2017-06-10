@@ -158,8 +158,8 @@ h1 {
 .tile {
   padding: 12px;
   margin: 4px;
-  border-radius: 6px;
-  background-color: #A92119;
+  background-color: #87110B;
+  box-shadow: 0px 3px #65120A;
 }
 .tile:hover {
   box-shadow: 0px 0px rgba(0,0,0,0);
