@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 /*general*/
 html {
   height: 100%;
 }
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
     background: #FF3529; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#FF3529, #9B1E16); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#FF3529, #9B1E16); /* For Opera 11.1 to 12.0 */
@@ -43,25 +44,20 @@ input[type="checkbox"], label{
   margin:1rem!important;
 }
 span {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
   color: #FFFFFF;
   line-height: 1.8;
 }
 
 h1 {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   color: #FFFFFF;
 }
 
 .fa {
   padding: 0px;
 }
-.arrowback  {
-  background-color: green;
-  padding: 10px 4px 10px 4px;
-}
-
 
 /*navigation*/
 
@@ -69,7 +65,7 @@ h1 {
   border-radius: 0px;
   border: 0px;
   background-color: #A2140D;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   margin: 0px;
     box-shadow: 0px 1.5px #7B0903;
 }
@@ -154,7 +150,7 @@ td, th {
   border-top: solid #FFFFFF 1px;
   padding: 4px 6px 4px 6px;
   text-align: center;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
   font-size: 17px;
   color: #212F3D;
@@ -197,7 +193,7 @@ footer a:hover {
 }
 
 .footerbrand {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 100;
   font-size: 32pt;
   margin-bottom: 25px;
@@ -226,7 +222,7 @@ footer a:hover {
     display: inline;
   }
   .footerbrand {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 100;
     font-size: 28pt;
     margin-bottom: 25px;
