@@ -25,11 +25,30 @@
 <!--content-->
   <div class="content">
   <div class="container-fluid">
-  <form method="post">
-    <input type="email" name="mail" placeholder="Your mail address"><br />
-    <input type="name" name="name"><br />
-    <textarea name="text">Your message here.</textarea>
-    <input type="submit" value="Send Mail">
+  <form method="post" action="sendmail.php">
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+    <input type="email" name="mail" placeholder="Mail address" class="form-control">
+    </div>
+    </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+    <input type="name" name="name" placeholder="Name" class="form-control">
+    </div>
+    </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+    <textarea style="margin: 10px;min-height: 15rem;" name="text" class="form-control" onclick="this.value=''">Your message here.</textarea>
+    </div>
+    </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+    <input type="submit" value="Send Mail" class="form-control">
+    </div>
+    </div>
     </form>
   </div>
 </div>
