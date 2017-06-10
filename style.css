@@ -23,7 +23,11 @@ input[type="checkbox"], label{
   position: static!important;
   margin:1rem!important;
 }
-
+@media (min-width: 768px){
+.col-sm-offset-2 {
+    margin: 0!important;
+}
+}
 /*navigation*/
 
 .navbar {
