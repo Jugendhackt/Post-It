@@ -1,0 +1,431 @@
+/*general*/
+
+.fa {
+  padding: 0px;
+}
+
+
+/*navigation*/
+
+.navbar {
+  border-radius: 0px;
+  background-color: #F83C3C;
+  font-family: 'Noto Sans', sans-serif;
+  margin-bottom: 0px;
+}
+ 
+.navbar li{
+  list-style: none;
+}
+
+.navbar-default .navbar-nav a {
+  color: #FFFFFF!important;
+  font-weight: 500;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.navbar .navbar-brand {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 18pt;
+}
+
+.navbar .fa {
+  color: #FFFFFF;
+  padding-right: 3px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FFFFFF;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+  color: #FFFFFF;
+}
+
+.dropdown-header {
+  font-size: 13px;
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+  background-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+
+/*content*/
+
+.content {
+  background-color: #FFFFFF;
+  padding: 15px 60px 15px 15px;
+}
+
+.content span {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: #212F3D;
+  line-height: 1.8;
+}
+
+.content h1 {
+  font-family: 'Raleway', sans-serif;
+  color: #196F3D;
+}
+
+.textlink {
+  color: #196F3D;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.textlink:hover {
+  color: #196F3D;
+  text-decoration: underline;
+}
+
+.textlink:visited {
+  color: #196F3D;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+
+/*games*/
+table {
+  width: 100%;
+  border-collapse: separate;
+  border: solid #196F3D 1px;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+}
+
+td, th {
+  border-left: solid #196F3D 1px;
+  border-top: solid #196F3D 1px;
+  padding: 4px 6px 4px 6px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: #212F3D;
+}
+
+th {
+  border-top: none;
+  color: #196F3D;
+  font-weight: 500;
+}
+
+td:first-child, th:first-child {
+  border-left: none;
+}
+
+.changes {
+  text-align: left;
+}
+
+.download {
+  text-align: center;
+}
+
+.jumpnrunparallax {
+  background-image: url("../img/jumpnrun.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom right;
+  height: 400px;
+}
+
+.jumpnrunparallax1 {
+  background-image: url("../img/jumpnrun.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom left;
+  height: 400px;
+}
+
+.topdownshooterparallax {
+  background-image: url("../img/topdownshooter.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 400px;
+}
+
+.topdownshooterparallax1 {
+  background-image: url("../img/topdownshooter.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 400px;
+}
+
+.catchitparallax{
+  background-image: url("../img/catchit.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 400px;
+}
+
+.catchitparallax1 {
+  background-image: url("../img/catchit.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 400px;
+}
+
+/*parallax effect*/
+.contactparallax {
+  background-image: url("../img/papersheets.jpg");
+  height: 400px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contactparallax1 {
+  background-image: url("../img/stars.jpg");
+  height: 400px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax {
+  background-image: url("../img/code.png");
+  height: 400px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax2 {
+  background-image: url("../img/pixelart.png");
+  height: 400px;
+  padding: 200px 0px 200px 0px;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax3 {
+  background-image: url("../img/jojohistory.png");
+  height: 400px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax4 {
+  background-image: url("../img/lowres_mobo_red.jpg");
+  height: 400px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/*footer*/
+
+footer {
+  padding: 20px 0px 30px 0px;
+  width: 100%;
+  text-align: center;
+  bottom: 0px;
+  color: #212F3D;
+  background-color: #FFFFFF;
+}
+
+footer a {
+  color: #212F3D;
+  text-decoration: none;
+  border-bottom: 0px solid #212F3D;
+}
+
+footer a:visited {
+  color: #212F3D;
+  text-decoration: none;
+  border-bottom: 0px solid #212F3D;
+}
+
+footer a:hover {
+  color: #212F3D;
+  text-decoration: none;
+  border-bottom: 2px solid #212F3D;
+}
+
+.footerbrand {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  font-size: 32pt;
+  margin-bottom: 25px;
+}
+
+.brand1 {
+  color: #FFFFFF;
+}
+
+.brand2 {
+  color: #FFFFFF;
+}
+
+.footerdivider {
+  color: #212F3D;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.faicon {
+  color: #196F3D;
+  font-size: 20pt;
+  padding-left: 4px;
+}
+
+
+/*for pixelarts*/
+
+.pixel {
+  border: 0px;
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+
+/*responsive line breaks*/
+
+.rl {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .rl {
+    display: inline;
+  }
+  .footerbrand {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 50pt;
+    margin-bottom: 25px;
+  }
+  .changes {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .jumpnrunparallax {
+    background-image: url("../img/jumpnrun.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right;
+    height: 500px;
+    background-attachment: fixed;
+  }
+
+  .jumpnrunparallax1 {
+    background-image: url("../img/jumpnrun.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+    height: 1000px;
+    background-attachment: fixed;
+  }
+
+  .topdownshooterparallax {
+    background-image: url("../img/topdownshooter.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    height: 500px;
+    background-attachment: fixed;
+  }
+
+  .topdownshooterparallax1 {
+    background-image: url("../img/topdownshooter.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 1100px;
+    background-attachment: fixed;
+  }
+
+  .catchitparallax{
+    background-image: url("../img/catchit.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 500px;
+    background-attachment: fixed;
+  }
+
+  .catchitparallax1 {
+    background-image: url("../img/catchit.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 1100px;
+    background-attachment: fixed;
+  }
+
+  /*parallax effect*/
+  .contactparallax {
+    background-image: url("../img/papersheets.jpg");
+    height: 500px;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .contactparallax1 {
+    background-image: url("../img/stars.jpg");
+    height: 700px;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .parallax {
+    background-image: url("../img/code.png");
+    height: 500px;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .parallax2 {
+    background-image: url("../img/pixelart.png");
+    height: 800px;
+    background-attachment: fixed;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .parallax3 {
+    background-image: url("../img/jojohistory.png");
+    height: 700px;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .parallax4 {
+    background-image: url("../img/lowres_mobo_red.jpg");
+    height: 700px;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

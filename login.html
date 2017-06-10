@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width = device-width, initial-scale = 1">
   <link rel="icon" href="img/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Raleway|Noto+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Raleway" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -20,15 +21,25 @@
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
-        &#9776;
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </button>
         <a class="navbar-brand" href="index.html"><span class="brand1">Post</span><span class="brand2">It</span></a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-
-
+          <li class="active"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+          <li><a href="design.html" target="_self"><i class="fa fa-paint-brush" aria-hidden="true"></i>Design</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-gamepad" aria-hidden="true"></i>Games<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-header">alpha releases</li>
+              <li><a href="topdownshooter.html">Top down shooter</a></li>
+              <li class="dropdown-header">beta releases</li>
+              <li><a href="catchit.html">Catch it</a></li>
+              <li><a href="jumpnrun.html">Jump'n'run</a></li>
             </ul>
           </li>
           <li><a href="contact.html"><i class="fa fa-envelope" aria-hidden="true"></i>Contact</a></li>
@@ -37,13 +48,15 @@
     </div>
   </nav>
   <!--content-->
-
+  <input type="text" class="" id="usernameinput">
+  <input type="password" class="" id="passwordinput">
+  <button id="loginbutton">login</button>
   <!--footer-->
   <footer>
     <div class="container-fluid">
       <div class="row">
         <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <span class="footerbrand brand1">Post</span><span class="footerbrand brand2">It</span>
+          <span class="footerbrand brand1">Jojo</span><span class="footerbrand brand2">Games</span>
         </div>
         <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <a href="https://twitter.com/JojoGamesDev" target="_blank">Twitter<i class="fa fa-twitter faicon" aria-hidden="true"></i></a>
@@ -62,24 +75,10 @@
     </div>
   </footer>
   <!--scripts-->
-  <script>
-    (function(i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function() {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-78472624-1', 'auto');
-    ga('send', 'pageview');
-  </script>
   <script src="https://use.fontawesome.com/2beeaf0fcf.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="login.js"></script>
 </body>
+
 </html>
