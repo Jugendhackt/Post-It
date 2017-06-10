@@ -94,8 +94,24 @@ switch ($res){
 
 	case "sessions":
 		switch($action){
-			case "put":
 
+			// LogIn NOT SignUp!
+			case "put":
+				// Test if session is still alive.
+				if(!test_hash()){
+					echo '{"code": 200, "description": "Session still alive!", "sid": $_COOKIE[sid]}';
+					leave();
+				}
+
+				// If too fews parameters: Return 400 error.
+				if($args)
+
+				// If Session is not still alive: Try to LogIn
+				$quesult = $GLOBALS['mysql']->query("SELECT `user`,`password` WHERE `user` = $args[user]");
+				if(!$quesult){
+					echo '{"code": 409, "description":"There is no user with this name."}';
+					leave();
+				}
 			default:
 				echo "{\"code\": 404, \"description\": \"Not found\" }";
 				leave();
@@ -169,10 +185,10 @@ switch ($res){
 
 			// Get all Entries in the Todo list and return it as json
 			case "get":
-				if(!test_hash()){
+				/*if(!test_hash()){
 					echo '{"code": 401, "description": "You\'re not permitted!"}';
 					leave();
-				}
+				}*/
 				$quesult = $GLOBALS['mysql']->query("SELECT * FROM `postit_todo`");
 				$entries = array();
 				foreach($quesult->fetch_all(MYSQLI_NUM) as $entry){
