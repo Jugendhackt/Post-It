@@ -14,6 +14,10 @@
   margin-bottom: 0px;
 }
  
+.navbar li{
+  list-style: none;
+}
+
 .navbar-default .navbar-nav a {
   color: #FFFFFF!important;
   font-weight: 500;
