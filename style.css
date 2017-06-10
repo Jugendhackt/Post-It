@@ -6,11 +6,11 @@ html {
   background: -o-linear-gradient(#FF3529, #9B1E16); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#FF3529, #9B1E16); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#FF3529, #9B1E16); /* Standard syntax */
-  color: #FFFFFF;
   background-repeat: no-repeat;
   background-size: cover;
 }
 body {
+  color: #FFFFFF!important;
   font-family: 'Lato', sans-serif;
   background-color: rgba(0, 0, 0, 0);
   height: 100%;
@@ -191,7 +191,7 @@ td, th {
   font-family: 'Lato', sans-serif;
   font-weight: 500;
   font-size: 17px;
-  color: #212F3D;
+  color: #FFF;
 }
 
 th {
