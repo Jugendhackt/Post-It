@@ -13,7 +13,10 @@ a:hover {
 .fa {
   padding: 0px;
 }
-
+.arrowback  {
+  background-color: #E74C3C;
+  padding: 10px 4px 10px 4px;
+}
 input {
   margin: 1rem;
   padding: 1rem;
