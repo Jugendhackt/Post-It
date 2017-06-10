@@ -158,12 +158,12 @@ h1 {
   padding: 12px;
   margin: 4px;
   background-color: #87110B;
-  box-shadow: 0px 3px #65120A;
+  box-shadow: 0px 1.5px #65120A;
   background-color: #A92119;
   }
 .tile:hover {
   box-shadow: 0px 0px rgba(0,0,0,0);
-  background-color: #641E16;
+  background-color: #94130C;
 }
 .tile h3 {
   margin: 0px;
