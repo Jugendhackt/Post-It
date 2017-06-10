@@ -18,24 +18,38 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <p class="navbar-brand"><i class="fa fa-sticky-note-o" aria-hidden="true"></i><span>PostIt</span></p>
+        <a class="navbar-brand"><i onclick="location.href='main.html'" style="cursor: pointer;padding-top: 0;" class="fa fa-arrow-left faicon arrowback" aria-hidden="true"></i></a><p class="navbar-brand"><i class="fa fa-calendar-check-o faicon" aria-hidden="true"></i><span>Mailer</span></p>
       </div>
     </div>
   </nav>
 <!--content-->
   <div class="content">
   <div class="container-fluid">
-    <div class="row">
-      <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-        <a href="taskmanager.html"><div class="btn btn-default">Task manager</div></a>
-      </div>
-      <div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <a><div class="btn btn-default">Shopping list</div></a>
-      </div>
-      <div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <a><div class="btn btn-default">Meeting point</div></a>
-      </div>
+  <form method="post" action="sendmail.php">
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+    <input type="email" name="mail" placeholder="Mail address" class="form-control" required="required">
     </div>
+    </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+    <input type="name" name="name" placeholder="Name" class="form-control" required="required">
+    </div>
+    </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+    <textarea style="margin: 10px;min-height: 15rem;" name="text" class="form-control" onclick="this.value=''" required="required">Your message here.</textarea>
+    </div>
+    </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+    <input type="submit" value="Send Mail" class="form-control">
+    </div>
+    </div>
+    </form>
   </div>
 </div>
 <!--footer-->

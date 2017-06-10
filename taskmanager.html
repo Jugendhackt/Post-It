@@ -11,33 +11,64 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
 <!--navigation-->
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <p class="navbar-brand"><i class="fa fa-sticky-note-o" aria-hidden="true"></i><span>PostIt</span></p>
+        <a class="navbar-brand"><i onclick="location.href='main.html'" style="cursor: pointer;padding-top: 0;" class="fa fa-arrow-left faicon arrowback" aria-hidden="true"></i></a><p class="navbar-brand"><i class="fa fa-calendar-check-o faicon" aria-hidden="true"></i><span>Task Manager</span></p>
       </div>
     </div>
   </nav>
 <!--content-->
   <div class="content">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-        <a href="taskmanager.html"><div class="btn btn-default">Task manager</div></a>
-      </div>
-      <div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <a><div class="btn btn-default">Shopping list</div></a>
-      </div>
-      <div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <a><div class="btn btn-default">Meeting point</div></a>
-      </div>
+    <div class="container-fluid">
+      <table>
+          <thead>
+            <tr>
+              <th>Platform</th>
+              <th>Link</th>
+              <th>Version</th>
+            </tr>
+          </thead>
+          <tr>
+            <td><i class="fa fa-windows" aria-hidden="true"></i></td>
+            <td class="download"><a href="JumpnRun.exe" download>Download for Windows</a></td>
+            <td>0.1</td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-apple" aria-hidden="true"></i></td>
+            <td>Not supported in this version.</td>
+            <td>0.1</td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-linux" aria-hidden="true"></i></td>
+            <td>Not supported in this version.</td>
+            <td>0.1</td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-gamepad" aria-hidden="true"></i></td>
+            <td>Not supported in this version.</td>
+            <td>0.1</td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-android" aria-hidden="true"></i></td>
+            <td>Not supported in this version.</td>
+            <td>0.1</td>
+          </tr>
+          <tr>
+            <td>iOS</td>
+            <td>Not supported in this version.</td>
+            <td>0.1</td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-globe" aria-hidden="true"></i></td>
+            <td>Not supported in this version.</td>
+            <td>0.1</td>
+          </tr>
+        </table>
     </div>
   </div>
-</div>
 <!--footer-->
 <footer>
   <div class="container-fluid">
