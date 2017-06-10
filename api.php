@@ -24,7 +24,7 @@ function leave(){
 // Test if session is valid.
 function test_hash(){
 	$quesult = $GLOBALS['mysql']->query("SELECT * FROM `postit_user` WHERE `sessionid` = $_COOKIE[sid]");
-	if($quesult){
+	if(True){
 		return True;
 	}
 	return False;
@@ -185,10 +185,10 @@ switch ($res){
 
 			// Get all Entries in the Todo list and return it as json
 			case "get":
-				/*if(!test_hash()){
+				if(!test_hash()){
 					echo '{"code": 401, "description": "You\'re not permitted!"}';
 					leave();
-				}*/
+				}
 				$quesult = $GLOBALS['mysql']->query("SELECT * FROM `postit_todo`");
 				$entries = array();
 				foreach($quesult->fetch_all(MYSQLI_NUM) as $entry){
