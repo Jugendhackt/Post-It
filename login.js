@@ -1,15 +1,14 @@
 const ajax = (resource, action, data, callback) => {
-		$.ajax({
-			url: 'api.php',
-			type: 'POST',
-			data: {resource, action, 'payload': data},
-			dataType: 'json',
-			success: function(result){
-				return callback(result);
-			}
-		});
-	}
-
+	$.ajax({
+		url: 'api.php',
+		type: 'POST',
+		data: {resource, action, 'payload': data},
+		dataType: 'json',
+		success: function(result){
+			return callback(result);
+		}
+	});
+}
 
 const login = (username, password) => {
 	ajax('sessions', 'put', {username, password}, function(result){
