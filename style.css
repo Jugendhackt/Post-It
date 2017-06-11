@@ -21,6 +21,9 @@ body {
 #main {
     overflow:auto;
 }
+.container-fluid{
+  color: white;
+}
 footer {
   position: relative;
   margin-top: -50px; /* negative value of footer height */
@@ -116,12 +119,17 @@ h1 {
   background-color: #87110B;
   box-shadow: 0px 2px #65120A;
   transition-delay: 0.2s;
+  color: #FFFFFF;
 }
 .btn-default:hover{
   border: 0px;
   border-radius: 0px;
-  background-color: #94130C;
+  background-color: #87110B!important;
   box-shadow: 0px 2px #65120A;
+  color: #FFFFFF;
+}
+#addtask {
+  margin-top: 10px;
 }
 .content {
   padding: 15px 15px 15px 15px;
@@ -180,12 +188,22 @@ h1 {
 table {
   border: 0px;
   width: 100%;
+  color: #FFFFFF;
 }
 tr {
   margin: 1px 0px;
 }
 th {
   text-align: center;
+  font-weight: 100;
+  padding: 4px 0px 4px 0px;
+}
+td {
+  padding: 4px;
+}
+.td-right {
+  text-align: right;
+  padding-right: 10px;
 }
 tr:nth-child(even) {background-color: rgba(0,0,0,0.2);}
 tr:nth-child(odd) {background-color: rgba(0,0,0,0.3);}
