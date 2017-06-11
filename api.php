@@ -68,15 +68,15 @@ switch ($res){
 				if(count($args) >= 2){
 
 					// Check if user already exist
-					$quesult = $GLOBALS['mysql']->query("SELECT `name` FROM `postit_user` WHERE `name` = $args[name]");
+					$quesult = $GLOBALS['mysql']->query("SELECT `name` FROM `postit_user` WHERE `name` = \"$args[name]\"");
 					if($quesult->field_count > 0){
 						// If exist: return 409 error.
 						echo '{"code": 409, "description":"An user with this name already exist."}';
 						leave();
 					}
 					// If not exist: Add User and return 200 success.
-					$quesult->free();
-					$GLOBALS['mysql']->query("INSERT INTO `postit_user`(`name`, `password`) VALUES ($args[name], " . password_hash($args['password'], PASSWORD_DEFAULT) . ")");
+					//$quesult->free();
+					$GLOBALS['mysql']->query("INSERT INTO `postit_user`(`name`, `password`) VALUES (\"$args[name]\", " . password_hash($args['password'], PASSWORD_DEFAULT) . ")");
 					echo '{"code": 200, "description": "Action was successful."}';
 					leave();
 				} else {
@@ -103,16 +103,16 @@ switch ($res){
 					echo '{"code": 200, "description": "Session still alive!", "sid": $_COOKIE[sid]}';
 					leave();
 				}
-
+				/*
 				// If too fews parameters: Return 400 error.
 				if($args)
 					
 				// If Session is not still alive: Try to LogIn
-				$quesult = $GLOBALS['mysql']->query("SELECT `user`,`password` WHERE `user` = $args[user]");
+				$quesult = $GLOBALS['mysql']->query("SELECT `user`,`password` WHERE `user` = \"$args[user]\"");
 				if(!$quesult){
 					echo '{"code": 409, "description":"There is no user with this name."}';
 					leave();
-				}
+				}*/
 			default:
 				echo "{\"code\": 404, \"description\": \"Not found\" }";
 				leave();
@@ -148,7 +148,7 @@ switch ($res){
 				}
 				if(count($args) >= 3){
 					//Check if entry still exist.
-					$quesult = $GLOBALS['mysql']->query("SELECT `id` FROM `postit_todo` WHERE `id` = $args[id]");
+					$quesult = $GLOBALS['mysql']->query("SELECT `id` FROM `postit_todo` WHERE `id` = '$args[id]'");
 					if($quesult->field_count > 0){
 						// If exist: return 409 error.
 						echo '{"code": 409, "description":"There isn\'t any entry with this id."}';
@@ -169,16 +169,18 @@ switch ($res){
 				}
 				if(count($args) >= 1){	
 					//Check if entry still exist.
-					$quesult = $GLOBALS['mysql']->query("SELECT `id` FROM `postit_todo` WHERE `id` = \"$args[id]\"");
-					if($quesult->field_count > 0){
+					$quesult = $GLOBALS['mysql'];//->query("SELECT `id` FROM `postit_todo` WHERE `id` = \"$args[id]\"");
+					/*if($quesult->field_count > 0){
 						// If exist: return 409 error.
 						echo '{"code": 409, "description":"There isn\'t any entry with this id."}';
 						leave();
-					}
+					}*/
 					//If still exist: Delete it!
-					$quesult->free();
+					//$quesult->free();
+					$query = $args[id];
 					$quesult->query("DELETE FROM `postit_todo` WHERE `id` = $args[id]");
-					echo '{"code": 200, "description": "Action was successful."}';
+
+					echo '{"code": 200, "description": "Action was successful."}, query:' . $query;
 					leave();
 				} else {
 					// If too fews parameters: Return 400 error.

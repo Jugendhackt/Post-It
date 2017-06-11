@@ -26,7 +26,10 @@ const singup = (username, password) => {
 class TodoEntry {
 	constructor(text, done, id) {
 		this.text = text;
-		this.done = done;
+		if(done == null)
+			this.done = false;
+		else
+			this.done = done;
 		this.id = id;
 	}
 
@@ -55,12 +58,11 @@ class TodoEntry {
 	}
 
 	delete() {
-		ajax('todos', 'delete', null, function(result){});
+		ajax('todos', 'delete',  {'id': this.id}, function(result){});
 	}
 }
 
-const testEntry = new TodoEntry("test", false, null);
-testEntry.save();
+
 
 let template = null;
 const getTodoTemplate = () => {
@@ -74,21 +76,69 @@ const getTodoTemplate = () => {
 const addTodoRow = (entry) => {
 	const t = getTodoTemplate().clone();
 	t.html(t.html().replace("{{$text}}", entry.text));
+	t.data('entry', entry);
 	$('#todoTable').append(t);
+	$(t.children()[1]).click((event) => {
+		const parent = $(event.currentTarget).parent();
+		console.log(parent.data('entry'));
+		parent.data('entry').delete();
+		parent.remove();
+	});
+	//t.children
 }
 
+const deleteTodoRow = (event) => {
+	console.log(event);
+}
+
+/*const changeTodoRow = (oldEntry, entry) => {
+	$
+}*/
+
 $('#loginbutton').click(() => {
+	console.log('Login');
 	login($('#usernameinput').val(), $('#passwordinput').val());
 });
 
 $('#signupbutton').click(() => {
+	console.log('Singup');
 	singup($('#usernameinput').val(), $('#passwordinput').val())
 });
 
-if($('#todoTable')) {
+$('#addtask').click(() => {
+	if($('addtaskinput').val() != ''){
+		const tEntry = new TodoEntry($('#addtaskinput').val(), false, null);
+		$('#addtaskinput').val('');
+		tEntry.save();
+		addTodoRow(tEntry);
+	}
+});
+
+if($('#todoTable').length > 0) {
+	console.log('isTodo');
 	TodoEntry.getList((entries) => {
 		for(let e of entries){
 			addTodoRow(e);
 		}
 	});
+	/*setInterval(() => {
+		TodoEntry.getList((entries) => {
+			/*if(oldEntries != entries){
+				for(let e of entries){
+					let eExists = false;
+					for(let oldE of oldEntries){
+						if(e.id == oldE.id)
+							eExists = true;
+					}
+					if(!eExists){
+
+					}
+				}
+				oldEntries = entries;
+			}
+			for(let row of $('.todoRow')){
+				row.remove();
+			}
+		});
+	}, 5000);*/
 }

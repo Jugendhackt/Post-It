@@ -124,7 +124,7 @@ input[type="checkbox"], label{
 .btn-default:hover{
   border: 0px;
   border-radius: 0px;
-  background-color: #94130C;
+  background-color: #87110B!important;
   box-shadow: 0px 2px #65120A;
   color: #FFFFFF;
 }

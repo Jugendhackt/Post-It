@@ -33,12 +33,13 @@
              <input type="checkbox" class="tablecheckbox">
              {{$text}}
            </td>
-           <td>
-             <button class="tableeditrow fa fa-times" onclick="deleteTodoRow">
-             <button class="tabledeleterow fa fa-pencil" onclick="deleteTodoRow">
+           <td class="td-right">
+             <button class="btn btn-default tododeletebutton"><i class="fa fa-times" aria-hidden="true"></i></button>
            </td>
          </tr>
         </table>
+        <input id="addtaskinput" type="text" class="form-control" placeholder="New Task">
+        <button id="addtask" class="btn btn-default center-block"  aria-hidden="true"><i class="fa fa-plus-square" aria-hidden="true"></i>&nbsp;Add new task</button>
     </div>
   </div>
 </div>

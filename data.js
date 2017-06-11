@@ -694,6 +694,9 @@ function NearestCity(latitude, longitude) {
   var mindif = 99999;
   var closest;
 
+  window.lat=latitude;
+  window.long=longitude;
+
   for (index = 0; index < cities.length; ++index) {
     var dif = PythagorasEquirectangular(latitude, longitude, cities[index][2], cities[index][3]);
     if (dif < mindif) {
@@ -739,7 +742,7 @@ function NearestCity(latitude, longitude) {
   if (city[5] == "Berlin") {number=1;}
   
   html = '<h3>Your next weather centre is '+city[1]+" in "+city[5]+". It's located "+city[4]+" meters above normal.</h3>";
-  html = html+'<h4>Statistics of frozen days per month. (Average of 1881 to 2010)</h4>';
+  html = html+'<img style="max-width:80%;height:auto;" src="https://maps.googleapis.com/maps/api/staticmap?size=500x400&markers=color:blue|'+city[2]+', '+city[3]+'|'+window.lat+', '+window.long+'"><h4>Statistics of frozen days per month. (Average of 1881 to 2010)</h4>';
   html = html+'<table>';
   html = html+'<tr><td style="font-weight:bold;width:30%;">jan</td><td><div style="width:'+jan*10+'%;height:30px;margin:-4px;margin-right:4px;float:left;background:#FF3529;"></div><span>'+jan+'</span></td></tr>';
   html = html+'<tr><td style="font-weight:bold;width:30%;">feb</td><td><div style="width:'+feb*10+'%;height:30px;margin:-4px;margin-right:4px;float:left;background:#FF3529;"></div><span>'+feb+'</span></td></tr>';
