@@ -63,7 +63,6 @@ class TodoEntry {
 }
 
 
-
 let template = null;
 const getTodoTemplate = () => {
 	if(!template){
