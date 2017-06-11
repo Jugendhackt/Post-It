@@ -77,10 +77,10 @@ const addTodoRow = (entry) => {
 	const t = getTodoTemplate().clone();
 	t.html(t.html().replace("{{$text}}", entry.text));
 	t.data('entry', entry);
-	console.log(t.data('entry'));
 	$('#todoTable').append(t);
 	$(t.children()[1]).click((event) => {
 		const parent = $(event.currentTarget).parent();
+		console.log(parent.data('entry'));
 		parent.data('entry').delete();
 		parent.remove();
 	});
@@ -96,22 +96,26 @@ const deleteTodoRow = (event) => {
 }*/
 
 $('#loginbutton').click(() => {
+	console.log('Login');
 	login($('#usernameinput').val(), $('#passwordinput').val());
 });
 
 $('#signupbutton').click(() => {
+	console.log('Singup');
 	singup($('#usernameinput').val(), $('#passwordinput').val())
 });
 
 $('#addtask').click(() => {
-	if()
-	const tEntry = new TodoEntry($('#addtaskinput').val(), false, null);
-	$('#addtaskinput').val('');
-	tEntry.save();
-	addTodoRow(tEntry);
+	if($('addtaskinput').val() != ''){
+		const tEntry = new TodoEntry($('#addtaskinput').val(), false, null);
+		$('#addtaskinput').val('');
+		tEntry.save();
+		addTodoRow(tEntry);
+	}
 });
 
-if($('#todoTable')) {
+if($('#todoTable').length > 0) {
+	console.log('isTodo');
 	TodoEntry.getList((entries) => {
 		for(let e of entries){
 			addTodoRow(e);
