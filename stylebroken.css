@@ -1,22 +1,21 @@
-/*general*/
+/*responsive background & footer*/
 html {
-  height: 100%;
+  height: 100%; /*to ensure that background spans whole screen & footer is aligned to bottom*/
 }
 body {
   font-family: 'Lato', sans-serif;
-  background-color: rgba(0, 0, 0, 0);
-  height: 100%;
+  height: 100%; /*to ensure that background spans whole screen & footer is aligned to bottom*/
   color: #FFFFFF;
 }
 #wrap {
-  min-height: 100%;
+  min-height: 100%; /*to ensure that background spans whole screen & footer is aligned to bottom*/
   padding: 0px 0px 50px 0px; /* this needs to be bigger than footer height*/
   background: #FF3529; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#FF3529, #9B1E16); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#FF3529, #9B1E16); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#FF3529, #9B1E16); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#FF3529, #9B1E16); /* Standard syntax */
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; /*gradient wont repeat*/
   background-size: cover;
 }
 #main {
@@ -32,33 +31,16 @@ footer {
   clear:both;
   padding-top:20px;
 }
+
+/*general style*/
 a {
   color: #FFFFFF;
 }
 a:hover {
   color: #FFFFFF;
 }
-/*general*/
 .fa {
   padding: 0px;
-}
-.arrowback  {
-  background-color: rgba(255,255,255,0);
-  padding: 10px 4px 10px 4px;
-}
-input {
-  margin: 1rem;
-  padding: 1rem;
-  max-width: 90%;
-}
-
-input[type="button"]{
-  color:#FFFFFF!important;
-}
-
-input[type="checkbox"], label{
-  position: static!important;
-  margin:1rem!important;
 }
 span {
   font-family: 'Lato', sans-serif;
@@ -66,18 +48,15 @@ span {
   color: #FFFFFF;
   line-height: 1.8;
 }
-
 h1 {
   font-family: 'Lato', sans-serif;
   color: #FFFFFF;
 }
-
-.fa {
-  padding: 0px;
-}
-
 /*navigation*/
-
+.arrowback  {
+  background-color: rgba(255,255,255,0);
+  padding: 10px 4px 10px 4px;
+}
 .navbar {
   border-radius: 0px;
   border: 0px;
@@ -113,7 +92,27 @@ h1 {
   color: #FFFFFF;
   padding-right: 3px;
 }
-/*content*/
+
+/*content section, more specific styles*/
+.content {
+  padding: 15px 15px 15px 15px;
+  margin-bottom: 6rem;
+}
+
+input {
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 90%;
+}
+
+input[type="button"]{
+  color:#FFFFFF!important;
+}
+
+input[type="checkbox"], label{
+  position: static!important;
+  margin:1rem!important;
+}
 .btn-default {
   border: 0px;
   border-radius: 0px;
@@ -125,23 +124,13 @@ h1 {
 .btn-default:hover{
   border: 0px;
   border-radius: 0px;
-  background-color: #94130C;
+  background-color: #87110B!important;
   box-shadow: 0px 2px #65120A;
   color: #FFFFFF;
 }
-.btn-link {
-  color: #FFFFFF;
-}
-.btn-link:hover {
-  color: #FFFFFF;
-}
-#addtask {
-  margin-top: 10px;
-}
-.content {
-  padding: 15px 15px 15px 15px;
-  margin-bottom: 6rem;
-}
+
+/*very specific, single-use classes and IDs*/
+/*login & password textboxes*/
 .form-control {
     display: block;
     width: 100%;
@@ -168,7 +157,33 @@ h1 {
 .form-control::placeholder {
   color: rgba(255,255,255,0.6);
 }
-/*main*/
+/*task manager*/
+#addtask {
+  margin-top: 10px;
+  /*table*/
+  table {
+    border: 0px;
+    width: 100%;
+    color: #FFFFFF;
+  }
+  tr {
+    margin: 1px 0px;
+  }
+  th {
+    text-align: center;
+    font-weight: 100;
+    padding: 4px 0px 4px 0px;
+  }
+  td {
+    padding: 4px;
+  }
+  .td-right {
+    text-align: right;
+    padding-right: 10px;
+  }
+  tr:nth-child(even) {background-color: rgba(0,0,0,0.2);}
+  tr:nth-child(odd) {background-color: rgba(0,0,0,0.3);}
+/*main menu*/
 .tile {
   padding: 12px;
   margin: 4px;
@@ -186,45 +201,6 @@ h1 {
 .tile p {
   margin: 0px;
 }
-
-
-
-
-
-/*table*/
-table {
-  width: 100%;
-  color: #FFFFFF;
-  border-spacing: 0px 2px!important;
-}
-th {
-  text-align: center;
-  font-weight: 100;
-  padding: 4px 0px 4px 0px;
-}
-td {
-  padding: 4px;
-}
-.td-right {
-  text-align: right;
-  padding-right: 10px;
-}
-tr:nth-child(even) {background-color: rgba(0,0,0,0.2);}
-tr:nth-child(odd) {background-color: rgba(0,0,0,0.3);}
-
-.taskdescription {
-  background-color: transparent;
-  border: none;
-  color: #FFFFFF;
-  width: 80%;
-}
-
-
-
-
-
-
-
 
 /*footer*/
 footer {
@@ -253,44 +229,19 @@ footer a:hover {
   text-decoration: none;
   border-bottom: 2px solid #FFFFFF;
 }
-
-.footerbrand {
-  font-family: 'Lato', sans-serif;
-  font-weight: 100;
-  font-size: 32pt;
-  margin-bottom: 25px;
-}
 .footerdivider {
   color: #FFFFFF;
   padding-left: 8px;
   padding-right: 8px;
 }
-
 .faicon {
   color: #FFFFFF;
   font-size: 20pt;
   padding-left: 4px;
 }
-/*responsive line breaks*/
-
-.rl {
-  display: block;
-}
+/*PC specific styling*/
 @media screen and (min-width: 768px) {
   .col-sm-offset-2 {
       margin: 0!important;
-  }
-  .rl {
-    display: inline;
-  }
-  .footerbrand {
-    font-family: 'Lato', sans-serif;
-    font-weight: 100;
-    font-size: 28pt;
-    margin-bottom: 25px;
-  }
-  .changes {
-    padding-left: 50px;
-    padding-right: 50px;
   }
 }
