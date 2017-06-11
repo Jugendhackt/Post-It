@@ -177,8 +177,10 @@ switch ($res){
 					}*/
 					//If still exist: Delete it!
 					//$quesult->free();
+					$query = $args[id];
 					$quesult->query("DELETE FROM `postit_todo` WHERE `id` = $args[id]");
-					echo '{"code": 200, "description": "Action was successful."}';
+
+					echo '{"code": 200, "description": "Action was successful."}, query:' . $query;
 					leave();
 				} else {
 					// If too fews parameters: Return 400 error.

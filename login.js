@@ -58,7 +58,7 @@ class TodoEntry {
 	}
 
 	delete() {
-		ajax('todos', 'delete', this.id, function(result){});
+		ajax('todos', 'delete',  {'id': this.id}, function(result){});
 	}
 }
 
