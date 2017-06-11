@@ -26,7 +26,7 @@ const singup = (username, password) => {
 class TodoEntry {
 	constructor(text, done, id) {
 		this.text = text;
-		if(done == null)
+		if(done == null || done == 0)
 			this.done = false;
 		else
 			this.done = done;
@@ -43,7 +43,7 @@ class TodoEntry {
 
 	static getList(callback){
 		ajax('todos', 'get', null, (result) => {
-			callback(result.entries.map((e) => new TodoEntry(e.text, e.done, e.id)));
+			callback(result.entries.map((e) => new TodoEntry(e.text, e.todo, e.id)));
 		});
 	}
 
@@ -53,7 +53,7 @@ class TodoEntry {
 				this.id = result.id;
 			});
 		} else {
-			ajax('todos', 'post', {'text': this.text, 'done': this.done, 'id': this.id}, () => {});
+			ajax('todos', 'post', {'text': this.text, 'todo': this.done, 'id': this.id}, () => {});
 		}
 	}
 
@@ -77,12 +77,25 @@ const addTodoRow = (entry) => {
 	t.html(t.html().replace("{{$text}}", entry.text));
 	t.data('entry', entry);
 	$('#todoTable').append(t);
-	$(t.children()[1]).click((event) => {
-		const parent = $(event.currentTarget).parent();
-		console.log(parent.data('entry'));
+	$($(t.children()[1])[0]).children().click((event) => {
+		const parent = $(event.currentTarget).parent().parent();
 		parent.data('entry').delete();
 		parent.remove();
 	});
+	$($(t.children()[0])[0]).children().click((event) => {
+		const parent = $(event.currentTarget).parent().parent();
+		if($($(t.children()[0])[0]).children().prop('checked'))
+			parent.data('entry').setState(1);
+		else
+			parent.data('entry').setState(0);
+		parent.data('entry').save();
+	});
+	console.log(entry);
+	if(entry.done){
+		console.log('isChecked');
+		$($(t.children()[0])[0]).children().prop("checked", true);
+	}
+	console.log($($(t.children()[0])[0]).children());
 	//t.children
 }
 
@@ -120,6 +133,7 @@ if($('#todoTable').length > 0) {
 			addTodoRow(e);
 		}
 	});
+	getTodoTemplate();
 	/*setInterval(() => {
 		TodoEntry.getList((entries) => {
 			/*if(oldEntries != entries){

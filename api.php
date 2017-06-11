@@ -148,15 +148,15 @@ switch ($res){
 				}
 				if(count($args) >= 3){
 					//Check if entry still exist.
-					$quesult = $GLOBALS['mysql']->query("SELECT `id` FROM `postit_todo` WHERE `id` = '$args[id]'");
-					if($quesult->field_count > 0){
+					$quesult = $GLOBALS['mysql']->query("SELECT `id` FROM `postit_todo` WHERE `id` = $args[id]");
+					if($quesult->field_count < 1){
 						// If exist: return 409 error.
 						echo '{"code": 409, "description":"There isn\'t any entry with this id."}';
 						leave();
 					}
 					//If still exist: Change it!
 					$quesult->free();
-					$quesult->query("UPDATE `postit_todo` SET `text`=$args[text],`todo`=$args[todo] WHERE `id` = $args[id]");
+					$GLOBALS['mysql']->query("UPDATE `postit_todo` SET `text`='$args[text]',`todo`=$args[todo] WHERE `id`=$args[id]");
 					echo '{"code": 200, "description": "Action was successful."}';
 					leave();
 				}
