@@ -744,18 +744,18 @@ function NearestCity(latitude, longitude) {
   html = '<h3>Your next weather centre is '+city[1]+" in "+city[5]+". It's located "+city[4]+" meters above normal.</h3>";
   html = html+'<img style="max-width:80%;height:auto;" src="https://maps.googleapis.com/maps/api/staticmap?size=500x400&markers=color:blue|'+city[2]+', '+city[3]+'|'+window.lat+', '+window.long+'"><h4>Statistics of frozen days per month. (Average of 1881 to 2010)</h4>';
   html = html+'<table>';
-  html = html+'<tr><td style="font-weight:bold;width:30%;">jan</td><td><div style="width:'+jan*10+'%;height:30px;margin:-4px;margin-right:4px;float:left;background:#FF3529;"></div><span>'+jan+'</span></td></tr>';
-  html = html+'<tr><td style="font-weight:bold;width:30%;">feb</td><td><div style="width:'+feb*10+'%;height:30px;margin:-4px;margin-right:4px;float:left;background:#FF3529;"></div><span>'+feb+'</span></td></tr>';
-  html = html+'<tr><td style="font-weight:bold;width:30%;">mar</td><td><div style="width:'+mar*10+'%;height:30px;margin:-4px;margin-right:4px;float:left;background:#FF3529;"></div><span>'+mar+'</span></td></tr>';
-  html = html+'<tr><td style="font-weight:bold;width:30%;">apr</td><td><div style="width:'+apr*10+'%;height:30px;margin:-4px;margin-right:4px;float:left;background:#FF3529;"></div><span>'+apr+'</span></td></tr>';
-  html = html+'<tr><td style="font-weight:bold;width:30%;">mai</td><td><div style="width:'+mai*10+'%;height:30px;margin:-4px;margin-right:4px;float:left;background:#FF3529;"></div><span>'+mai+'</span></td></tr>';
-  html = html+'<tr><td style="font-weight:bold;width:30%;">jun</td><td><div style="width:'+jun*10+'%;height:30px;margin:-4px;margin-right:4px;float:left;background:#FF3529;"></div><span>'+jun+'</span></td></tr>';
-  html = html+'<tr><td style="font-weight:bold;width:30%;">jul</td><td><div style="width:'+jul*10+'%;height:30px;margin:-4px;margin-right:4px;float:left;background:#FF3529;"></div><span>'+jul+'</span></td></tr>';
-  html = html+'<tr><td style="font-weight:bold;width:30%;">aug</td><td><div style="width:'+aug*10+'%;height:30px;margin:-4px;margin-right:4px;float:left;background:#FF3529;"></div><span>'+aug+'</span></td></tr>';
-  html = html+'<tr><td style="font-weight:bold;width:30%;">sep</td><td><div style="width:'+sep*10+'%;height:30px;margin:-4px;margin-right:4px;float:left;background:#FF3529;"></div><span>'+sep+'</span></td></tr>';
-  html = html+'<tr><td style="font-weight:bold;width:30%;">okt</td><td><div style="width:'+okt*10+'%;height:30px;margin:-4px;margin-right:4px;float:left;background:#FF3529;"></div><span>'+okt+'</span></td></tr>';
-  html = html+'<tr><td style="font-weight:bold;width:30%;">nov</td><td><div style="width:'+nov*10+'%;height:30px;margin:-4px;margin-right:4px;float:left;background:#FF3529;"></div><span>'+nov+'</span></td></tr>';
-  html = html+'<tr><td style="font-weight:bold;width:30%;">dec</td><td><div style="width:'+dec*10+'%;height:30px;margin:-4px;margin-right:4px;float:left;background:#FF3529;"></div><span>'+dec+'</span></td></tr>';
+  html = html+'<tr><td style="font-weight:bold;width:30%;">jan</td><td><div style="width:'+jan*10+'%;height:30px;margin:-4px;margin-right:4px;margin-top:-2px;float:left;background:#FF3529;"></div><span>'+jan+'</span></td></tr>';
+  html = html+'<tr><td style="font-weight:bold;width:30%;">feb</td><td><div style="width:'+feb*10+'%;height:30px;margin:-4px;margin-right:4px;margin-top:-2px;float:left;background:#FF3529;"></div><span>'+feb+'</span></td></tr>';
+  html = html+'<tr><td style="font-weight:bold;width:30%;">mar</td><td><div style="width:'+mar*10+'%;height:30px;margin:-4px;margin-right:4px;margin-top:-2px;float:left;background:#FF3529;"></div><span>'+mar+'</span></td></tr>';
+  html = html+'<tr><td style="font-weight:bold;width:30%;">apr</td><td><div style="width:'+apr*10+'%;height:30px;margin:-4px;margin-right:4px;margin-top:-2px;float:left;background:#FF3529;"></div><span>'+apr+'</span></td></tr>';
+  html = html+'<tr><td style="font-weight:bold;width:30%;">mai</td><td><div style="width:'+mai*10+'%;height:30px;margin:-4px;margin-right:4px;margin-top:-2px;float:left;background:#FF3529;"></div><span>'+mai+'</span></td></tr>';
+  html = html+'<tr><td style="font-weight:bold;width:30%;">jun</td><td><div style="width:'+jun*10+'%;height:30px;margin:-4px;margin-right:4px;margin-top:-2px;float:left;background:#FF3529;"></div><span>'+jun+'</span></td></tr>';
+  html = html+'<tr><td style="font-weight:bold;width:30%;">jul</td><td><div style="width:'+jul*10+'%;height:30px;margin:-4px;margin-right:4px;margin-top:-2px;float:left;background:#FF3529;"></div><span>'+jul+'</span></td></tr>';
+  html = html+'<tr><td style="font-weight:bold;width:30%;">aug</td><td><div style="width:'+aug*10+'%;height:30px;margin:-4px;margin-right:4px;margin-top:-2px;float:left;background:#FF3529;"></div><span>'+aug+'</span></td></tr>';
+  html = html+'<tr><td style="font-weight:bold;width:30%;">sep</td><td><div style="width:'+sep*10+'%;height:30px;margin:-4px;margin-right:4px;margin-top:-2px;float:left;background:#FF3529;"></div><span>'+sep+'</span></td></tr>';
+  html = html+'<tr><td style="font-weight:bold;width:30%;">okt</td><td><div style="width:'+okt*10+'%;height:30px;margin:-4px;margin-right:4px;margin-top:-2px;float:left;background:#FF3529;"></div><span>'+okt+'</span></td></tr>';
+  html = html+'<tr><td style="font-weight:bold;width:30%;">nov</td><td><div style="width:'+nov*10+'%;height:30px;margin:-4px;margin-right:4px;margin-top:-2px;float:left;background:#FF3529;"></div><span>'+nov+'</span></td></tr>';
+  html = html+'<tr><td style="font-weight:bold;width:30%;">dec</td><td><div style="width:'+dec*10+'%;height:30px;margin:-4px;margin-right:4px;margin-top:-2px;float:left;background:#FF3529;"></div><span>'+dec+'</span></td></tr>';
   html = html+'</table>';
   html = html+'<h4>Average temperature in '+city[5]+' (1881 to 2016)</h4>';
   html = html+'<table>';
@@ -763,7 +763,7 @@ function NearestCity(latitude, longitude) {
   html = html+'<h4>The current average temperature is '+Math.round((temperature[temperature.length-1][0]/temperature[0][0])*10000)/100+'% of '+temperature[0][0]+'.</h4>';
   
   for (index = temperature.length-1; index >= 0; index=index-1) {
-    html = html+'<tr><td style="font-weight:bold;width:30%;width:30%">'+temperature[index][0]+'</td><td><div style="width:'+temperature[index][number]*8+'%;height:30px;margin:-4px;margin-right:4px;float:left;background:#FF3529;"></div><span>'+temperature[index][number]+'</span></td></tr>';
+    html = html+'<tr><td style="font-weight:bold;width:30%;width:30%">'+temperature[index][0]+'</td><td><div style="width:'+temperature[index][number]*8+'%;height:30px;margin:-4px;margin-right:4px;margin-top:-2px;float:left;background:#FF3529;"></div><span>'+temperature[index][number]+'</span></td></tr>';
   }
   html = html+'</table>';
 
