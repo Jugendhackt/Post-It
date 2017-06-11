@@ -21,6 +21,9 @@ body {
 #main {
     overflow:auto;
 }
+.container-fluid{
+  color: white;
+}
 footer {
   position: relative;
   margin-top: -50px; /* negative value of footer height */
