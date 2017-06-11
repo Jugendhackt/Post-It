@@ -103,7 +103,13 @@ $('#signupbutton').click(() => {
 	singup($('#usernameinput').val(), $('#passwordinput').val())
 });
 
-let oldEntries = null;
+$('#addtask').click(() => {
+	if()
+	const tEntry = new TodoEntry($('#addtaskinput').val(), false, null);
+	$('#addtaskinput').val('');
+	tEntry.save();
+	addTodoRow(tEntry);
+});
 
 if($('#todoTable')) {
 	TodoEntry.getList((entries) => {
