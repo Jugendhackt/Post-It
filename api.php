@@ -75,7 +75,7 @@ switch ($res){
 						leave();
 					}
 					// If not exist: Add User and return 200 success.
-					//$quesult->free();
+					$quesult->free();
 					$GLOBALS['mysql']->query("INSERT INTO `postit_user`(`name`, `password`) VALUES (\"$args[name]\", " . password_hash($args['password'], PASSWORD_DEFAULT) . ")");
 					echo '{"code": 200, "description": "Action was successful."}';
 					leave();
@@ -99,20 +99,35 @@ switch ($res){
 			// LogIn NOT SignUp!
 			case "put":
 				// Test if session is still alive.
-				if(!test_hash()){
+				/*if(!test_hash()){
 					echo '{"code": 200, "description": "Session still alive!", "sid": $_COOKIE[sid]}';
 					leave();
-				}
-				/*
+				}*/
+				
 				// If too fews parameters: Return 400 error.
-				if($args)
+				if(count($args) < 2){
+					echo '{"code": 400, "description": "Too few parameters."}';
+					leave();
+				}
 					
-				// If Session is not still alive: Try to LogIn
+				// Try to LogIn
 				$quesult = $GLOBALS['mysql']->query("SELECT `user`,`password` WHERE `user` = \"$args[user]\"");
 				if(!$quesult){
 					echo '{"code": 409, "description":"There is no user with this name."}';
 					leave();
-				}*/
+				}
+
+				if(password_verify($args['password'], $quesult['password'])){
+					$sid = uniqid();
+					$password = $quesult['password'];
+					if(password_needs_rehash($password, PASSWORD_DEFAULT)){
+						$password = password_hash($args['password']);
+					}
+					$GLOBALS['mysql']->query("UPDATE `postit_user` SET `password`=$password,`sessionid`= WHERE `name` = '$args[user]'");
+					echo '{"code": 200, "description": "Action was successful.", "sid":'. $sid . '}';
+					leave();
+				}
+
 			default:
 				echo "{\"code\": 404, \"description\": \"Not found\" }";
 				leave();
@@ -215,4 +230,4 @@ switch ($res){
 		leave();
 }
 
-?>
+?>	
