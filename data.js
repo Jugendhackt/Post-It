@@ -760,10 +760,12 @@ function NearestCity(latitude, longitude) {
   html = html+'<h4>Average temperature in '+city[5]+' (1881 to 2016)</h4>';
   html = html+'<table>';
 
-  for (index = 0; index < temperature.length; ++index) {
+  html = html+'<h4>The current average temperature is '+Math.round((temperature[temperature.length-1][0]/temperature[0][0])*10000)/100+'% of '+temperature[0][0]+'.</h4>';
+  
+  for (index = temperature.length-1; index >= 0; index=index-1) {
     html = html+'<tr><td style="font-weight:bold;width:30%;width:30%">'+temperature[index][0]+'</td><td><div style="width:'+temperature[index][number]*8+'%;height:30px;margin:-4px;margin-right:4px;float:left;background:#FF3529;"></div><span>'+temperature[index][number]+'</span></td></tr>';
   }
-  html = html+'</table><h4>The current average temperature is '+Math.round((temperature[index-1][0]/temperature[0][0])*10000)/100+'% of '+temperature[0][0]+'.</h4>';
+  html = html+'</table>';
 
   frame.innerHTML = html;
 }
